@@ -1,3 +1,3 @@
-exports.printMsg = function() {
-	console.log("This is a message from the demo package");
-}
+const EasyImageResize = require('src/easy_image_resize');
+
+module.exports = EasyImageResize;
