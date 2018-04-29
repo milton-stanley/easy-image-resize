@@ -102,14 +102,19 @@ class EasyImageResize
 
 	}
 
-	setImagePointOfView(window, image_tag)
+	/**
+	 * Resize an DOM image element
+	 * @param window
+	 * @param image_tag
+	 */
+	resizeDOMImageObject(window, image_tag)
 	{
-		let style = this.calculateImageSize(window.innerWidth, window.innerHeight, image.naturalWidth, image.naturalHeight)
+		let style = this.calculateImageSize(window.innerWidth, window.innerHeight, image_tag.naturalWidth, image_tag.naturalHeight)
 
-		image_tag.style.left = style.left;
-		image_tag.style.top = style.top;
-		image_tag.style.height = style.height;
-		image_tag.style.width = style.width;
+		image_tag.style.left = style.left + 'px';
+		image_tag.style.top = style.top + 'px';
+		image_tag.style.height = style.height + 'px';
+		image_tag.style.width = style.width + 'px';
 	}
 
 }
